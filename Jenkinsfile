@@ -4,7 +4,9 @@ pipeline {
     stages {
         stage('Sentrio') {
             steps {
-                  sendDeploymentFinishedEvent environment: 'dev', application: "sample", release: "1.0.0-SNAPSHOT"
+                sh "ls"
+                sh "git log"
+                sendDeploymentFinishedEvent environment: 'dev', application: "sample", release: "1.0.0-SNAPSHOT"
             }
         }
     }
